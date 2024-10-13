@@ -1,28 +1,28 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';
+import App from './components/App.vue'; // Ваш основной компонент
+import router from './router'; // Импортируйте маршрутизатор
 
-// Vuetify
-import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
-import router from './router'; // Импортируйте ваш маршрутизатор
-
-// Components
-import App from './components/App.vue'
+// Импорт Vuetify
+import { createVuetify } from 'vuetify';
+import 'vuetify/styles';  // Импорт стилей Vuetify
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
 
 // Создание экземпляра Vuetify
 const vuetify = createVuetify({
     components,
-    directives
-})
+    directives,
+});
 
-// Создание приложения Vue
-const app = createApp(App)
+// Создание Vue-приложения
+const app = createApp(App);
 
-// Использование маршрутизатора и Vuetify
-app.use(router)
-app.use(vuetify)
+// Используйте маршрутизатор
+app.use(router);
 
-// Монтирование приложения
-app.mount('#app')
+// Добавляем Vuetify в приложение
+app.use(vuetify);
+
+// Монтируем приложение
+app.mount('#app');
+
